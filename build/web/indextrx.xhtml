@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Transaksi</title>
+        <style>
+            .box7{
+                font-family: poppins;
+                color: darkblue;
+                    font-size: large;
+            }
+            .box4{
+    top: 20%;
+    left: 50px;
+    position: absolute;
+}
+        </style>
+    </h:head>
+      <h:body style="background-color: #222">
+        
+                        
+            <center>
+                <h:form class="box7">
+                    <h2 style=" font-family: Poppins;font-style: normal;
+                                font-weight: normal;font-size: 37px;text-decoration: none;
+                                color: brown;text-transform: uppercase;">Data Transaksi</h2>
+                    
+                    <h:dataTable value ="#{dataController2.trx}" var="item" border="0" cellpadding="20" cellspacing="20" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:blueviolet;background-color: whitesmoke">
+           
+            <h:column>    				
+               <f:facet name = "header">
+              <h:outputText value="ID"/>               
+               </f:facet>    				
+                <h:outputText value="#{item.idTrx}"/>
+            </h:column>
+              
+            <h:column>    				
+                <f:facet name = "header">
+              <h:outputText value="Nama Pembeli"/>              
+                </f:facet>    				
+               #{item.namapembeli}
+            </h:column>
+            
+            <h:column>
+                <f:facet name = "header">
+              <h:outputText value="Nama Pie"/>               
+                </f:facet>
+               #{item.namapie}
+            </h:column>
+                         <h:column>
+                <f:facet name = "header">
+              <h:outputText value="Jumlah"/>               
+                </f:facet>
+               #{item.jumlah}
+            </h:column>
+             <h:column>
+                <f:facet name = "header">
+              <h:outputText value="Nama Chef"/>               
+                </f:facet>
+               #{item.namachef}
+            </h:column>
+            
+            
+            
+           
+             
+             
+         </h:dataTable>
+      </h:form>     
+            </center>
+          <table class="box4">
+           <td><h:graphicImage value = "/image/money2.gif"  height="500px" width="500px"  /></td>
+                 
+        </table>
+
+  </h:body>
+</html>

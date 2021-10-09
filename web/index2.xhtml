@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Daftar Menu</title>
+        <style>
+            .box7{
+                font-family: poppins;
+                color: darkblue;
+                    font-size: large;
+                    top: 25%;
+                    position: fixed;
+                    left: 40%;
+                   
+            }
+            .box4{
+    top: 20%;
+    right: 50px;
+    position: absolute;
+}
+.box {
+    width: 350px;
+    padding: 40px;
+    height: 350px;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%,-50%);
+    background: wheat;
+    text-align: center;
+     border-radius: 300px;
+     
+}
+ .box2 {
+   width: 100%;
+    background: gainsboro;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    height:5px;
+}
+        </style>
+    </h:head>
+      <h:body style="background-color:white">
+        
+            
+            <center>
+                <h:form class="box7">
+                    <h2 style=" font-family: Poppins;font-style: normal;
+                                font-weight: normal;font-size: 37px;text-decoration: none;
+                                color: brown;text-transform: uppercase;">List Menu</h2>
+                    <h:dataTable value ="#{dataController.pie}" var="item" border="0" cellpadding="20" cellspacing="20" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:seagreen;background-color: white">
+           
+            <h:column>    				
+               <f:facet name = "header">
+              <h:outputText value="ID"/>               
+               </f:facet>    				
+                <h:outputText value="#{item.idPie}"/>
+            </h:column>
+              
+            <h:column>    				
+                <f:facet name = "header">
+              <h:outputText value="Nama Pie"/>              
+                </f:facet>    				
+               #{item.nama}
+            </h:column>
+            
+            <h:column>
+                <f:facet name = "header">
+              <h:outputText value="Harga"/>               
+                </f:facet>
+               #{item.harga}
+            </h:column>
+            
+            <h:column>
+                <f:facet name = "header">
+             <h:outputText value="Rasa"/>               
+                </f:facet>
+               #{item.rasa}
+            </h:column>
+                        
+                        
+            
+           
+             
+             
+         </h:dataTable>
+      </h:form>     
+            </center>
+            <table class="box">
+            <td>
+                <ui:include src="sidebar.xhtml" />  
+            </td>
+                 
+        </table>
+          <table class="box2">
+                
+            <td>
+                        <ui:include src="headbar.xhtml" />  
+                    </td>
+               
+            </table>
+          <table class="box4">
+           <td><h:graphicImage value = "/image/pie3.gif"  height="200px" width="200px"  /></td>
+                 
+        </table>
+
+  </h:body>
+</html>

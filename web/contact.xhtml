@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Contact</title>
+        <h:outputStylesheet library="css" name="style.css"/>
+        <style>
+            .s{
+                position: fixed;
+                top: 30%;
+                width: 800px;
+                height: 800px;
+                left: 30%;
+            }
+              .box2 {
+   width: 100%;
+    background: gainsboro;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    height:5px;
+}
+        </style>
+        <script>
+            
+        function konfirmasi() {
+           
+            confirm("Terimakasih atas sarannya");
+        }
+    
+            </script>
+    </h:head>
+    <h:body>
+           <!-- ##### Google Maps End ##### -->
+
+    <!-- ##### Contact Area Start ##### -->
+    
+    <div class="s">
+            <div class="row" style="top: 50%;">
+                <div class="col-12" style="top: 50%;">
+                    <div class="contact-content-area" style="top: 50%;">
+                        <div class="row" style="top: 50%;">
+
+                            <div class="col-12 col-lg-6" style="top: 50%;">
+                                <div class="contact-content">
+                                    <h4>Get In Touch</h4>
+                                    
+                                    <!-- Contact Form Area -->
+                                    <div class="contact-form-area">
+                                        <h:form  class="c">
+                                            <div class="row">
+                                                <div class="col-12 col-lg-6">
+                                                    <div class="form-group">
+                                                        <b:inputText type="text" class="form-control" id="contact-name" placeholder="Nama"></b:inputText>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg-6">
+                                                    <div class="form-group">
+                                                        <b:inputText type="email" class="form-control" id="contact-email" placeholder="Email"></b:inputText>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-group">
+                                                        <textarea class="form-control" name="message" id="message" cols="30" rows="10" placeholder="Pesan"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <button type="submit" class="btn foode-btn" onclick="konfirmasi()">Send</button>
+                                                </div>
+                                            </div>
+                                        </h:form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-6">
+                                <div class="contact-content contact-information">                                   
+                                    <h4>Information</h4>
+                                    
+                                    <!-- Single Contact Info -->
+                                    <div class="single-contact-info d-flex">
+                                        <table>
+                                            <td><div class="glyphicon glyphicon-home"></div></td>
+                                            <td><p>Seminyak,Bali</p></td>
+                                             </table>
+                                            </div>
+                                    
+                                    <!-- Single Contact Info -->
+                                   <div class="single-contact-info d-flex">
+                                        <table>
+                                            <td><div class="glyphicon glyphicon-phone-alt"></div></td>
+                                            <td><p>(021)77-11-006</p></td>
+                                             </table>
+                                            </div>
+                                    
+                                    <!-- Single Contact Info -->
+                                   <div class="single-contact-info d-flex">
+                                        <table>
+                                            <td><div class="glyphicon glyphicon-phone"></div></td>
+                                            <td><p>0815-4716-1320</p></td>
+                                             </table>
+                                            </div>
+                                    
+                                    <!-- Single Contact Info -->
+                                    <div class="single-contact-info d-flex">
+                                        <table>
+                                            <td><div class="glyphicon glyphicon-envelope"></div></td>
+                                            <td><p>pieoneer@gmail.com</p></td>
+                                             </table>
+                                            </div>
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+   
+     <table class="box2">
+                
+            <td>
+                        <ui:include src="headbar.xhtml" />  
+                    </td>
+               
+            </table>
+        
+        
+    </h:body>
+</html>
+

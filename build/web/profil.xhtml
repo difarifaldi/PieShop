@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Profil</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <h:outputStylesheet library="css" name="bootstrap.min.css"/>
+         <style>
+              .box {
+    width: 420px;
+    height: 480px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: white;
+    text-align: center;
+     border-radius: 100px;
+     color: mediumpurple;
+}
+.box2 {
+   width: 100%;
+    background: gainsboro;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    height:5px;
+}
+.box4{
+    top: 30%;
+    left: 50px;
+    position: absolute;
+}
+.box5{
+    top: 30%;
+    right:  50px;
+    position: absolute;
+}
+
+        </style>
+    </h:head>
+    <h:body style="margin: 0;padding: 0;font-family: Poppins;background: white;">
+        
+                       
+                            <h:form class="box">
+                                <br/>
+                                <h:outputLabel style=" font-family: Poppins;font-style: normal;
+                                font-weight: normal;font-size: 37px;text-decoration: none;
+                                color: mediumpurple;text-transform: uppercase;">Profil</h:outputLabel>
+                                <br></br>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <h:outputLabel style="font-family: Centaur; font-size: 24px">Username</h:outputLabel>
+                                        </td>
+                                        <td width="5%"></td>
+                                        <td>
+                                            <b:inputText style="font-family: Centaur; font-size: 18px"
+                                                         placeholder="Masukan Username"
+                                                         value="#{tblPelanggan.username}"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <center>
+                                                <b:commandButton look="primary btn-success" value="Cari Data Pelanggan"
+                                                                 icon="search" action="#{tblPelanggan.getbyUsername()}"/>
+                                            </center>
+                                            <br/>
+                                        </td>
+                                    </tr>
+                                     <tr>
+                                        <td><h:outputLabel style="font-family: Centaur; font-size: 24px">Password:</h:outputLabel></td>
+                                        <td></td>
+                                        <td><h:inputText style="font-family: Centaur; font-size: 18px" value="#{tblPelanggan.password}"/></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><h:outputLabel style="font-family: Centaur; font-size: 24px">Nama:</h:outputLabel></td>
+                                        <td></td>
+                                        <td><h:inputText style="font-family: Centaur; font-size: 18px" value="#{tblPelanggan.nama}"/></td>
+                                    </tr>
+                                     <tr>
+                                        <td><h:outputLabel style="font-family: Centaur; font-size: 24px">Alamat:</h:outputLabel></td>
+                                        <td></td>
+                                        <td><h:inputText style="font-family: Centaur; font-size: 18px" value="#{tblPelanggan.alamat}"/></td>
+                                    </tr>
+                                     <tr>
+                                        <td><h:outputLabel style="font-family: Centaur; font-size: 24px">E-Mail:</h:outputLabel></td>
+                                        <td></td>
+                                        <td><h:inputText style="font-family: Centaur; font-size: 18px" value="#{tblPelanggan.email}" /></td>
+                                    </tr>
+                                     <tr>
+                                        <td><h:outputLabel style="font-family: Centaur; font-size: 24px">NoHp:</h:outputLabel></td>
+                                        <td></td>
+                                        <td><h:inputText style="font-family: Centaur; font-size: 18px" value="#{tblPelanggan.noHp}"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3">
+                                            <center>
+                                                <b:commandButton look="primary btn-success" value="UBAH"
+                                                                 icon="edit" action="#{tblPelanggan.updatePelanggan}"/>
+                                                &nbsp; &nbsp; &nbsp;
+                                                <b:commandButton look="primary btn-success" value="HAPUS"
+                                                                 icon="trash" action="#{tblPelanggan.deletePelanggan}"/>
+                                               
+                                            </center>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <br/>
+                                
+                            </h:form>
+         <table class="box2">
+                
+            <td>
+                        <ui:include src="headbar.xhtml" />  
+                    </td>
+               
+            </table>
+        <table class="box4">
+           <td><h:graphicImage value = "/image/pro4.gif"  height="500px" width="500px"  /></td>
+                 
+        </table>
+        <table class="box5">
+           <td><h:graphicImage value = "/image/pro6.gif"  height="500px" width="500px"  /></td>
+                 
+        </table>
+                       
+    </h:body>
+</html>
+

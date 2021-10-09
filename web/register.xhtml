@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Register</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <h:outputStylesheet library="css" name="bootstrap.min.css"/>
+        <style>
+              .box {
+    width: 450px;
+    height: 500px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: whitesmoke;
+    text-align: center;
+     border-radius: 100px;
+}
+.s {
+    
+    width: 350px;
+    padding: 5px;
+    position: absolute;
+    top: 72%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: none;
+    text-align: center;
+}
+
+
+
+        </style>
+    </h:head>
+     <h:body style="margin: 0;padding: 0;font-family: Poppins;background: #6ea9c4;">
+        
+           
+           
+               
+                    <b:container style="width: 25%">
+                       
+                            
+                        
+                        <h:form class="box">
+                            <h2 style=" font-family: Poppins;font-style: normal;
+                                font-weight: normal;font-size: 37px;text-decoration: none;
+                                color: mediumpurple;text-transform: uppercase;">Register</h2>
+                            <b:inputText id="uName" required="true" placeholder="Username" value="#{tblPelanggan.username}"
+                                         required-message="Username Tidak Boleh Kosong">
+                                <f:facet name="prepend">
+                                    <span class="glyphicon glyphicon-user"></span>
+                                </f:facet>
+                            </b:inputText>
+                            <b:inputText id="pWord" required="true" placeholder="Password" value="#{tblPelanggan.password}"
+                                         required-message="Password Tidak Boleh Kosong" type="password">
+                                <f:facet name="prepend">
+                                    <span class="glyphicon glyphicon-lock"></span>                                    
+                                </f:facet>
+                            </b:inputText>
+                            <b:inputText id="names" required="true" placeholder="Nama" value="#{tblPelanggan.nama}"
+                                         required-message="Nama Tidak Boleh Kosong" >
+                                <f:facet name="prepend">
+                                    <span class="glyphicon glyphicon-user"></span>                                    
+                                </f:facet>
+                            </b:inputText>
+                            <b:inputText id="alamat" required="true" placeholder="Alamat" value="#{tblPelanggan.alamat}"
+                                         required-message="Alamat Tidak Boleh Kosong" >
+                                <f:facet name="prepend">
+                                    <span class="glyphicon glyphicon-flag"></span>                                    
+                                </f:facet>
+                            </b:inputText>
+                            <b:inputText id="Email" required="true" placeholder="Email" value="#{tblPelanggan.email}"
+                                         required-message="Email Tidak Boleh Kosong" >
+                                <f:facet name="prepend">
+                                    <span class="glyphicon glyphicon-envelope"></span>                                    
+                                </f:facet>
+                            </b:inputText>
+                            <b:inputText id="HP" required="true" placeholder="No HP" value="#{tblPelanggan.noHp}"
+                                         required-message="No HP Tidak Boleh Kosong" >
+                                <f:facet name="prepend">
+                                    <span class="glyphicon glyphicon-phone"></span>                                    
+                                </f:facet>
+                            </b:inputText>
+                            
+                                                        <center>
+                                                            <b:commandButton look="primary btn-success" action="#{tblPelanggan.save()}"
+                                                                             value="Register" class="glyphicon glyphicon-registration-mark" size="1g"/>
+                                <br/><br/>
+                                
+                            </center>
+                        </h:form>
+                        <h:form class="s">
+                          <h:commandLink  style="text-decoration: none;display: block;
+                text-decoration: none;color: green;font-size: large;
+                font-weight: 400;"  action="index" value="Klik disini untuk login"></h:commandLink>
+                        </h:form>
+                        
+                 
+                
+                        
+                    </b:container>
+                
+            
+       
+    </h:body>
+</html>
+

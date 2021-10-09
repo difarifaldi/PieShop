@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <title>Login Admin</title>
+        <h:outputStylesheet library="css" name="bootstrap.min.css"/>
+        <style>
+              .box {
+    width: 400px;
+    height: 350px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: whitesmoke;
+    text-align: center;
+     border-radius: 100px;
+}
+
+
+            .box input[value = "Sign In"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid  #2ecc71;
+    padding: 14px 10px;
+    width: 100px;
+    outline: none;
+    color: slategray;
+    border-radius: 24px;
+    transition: 0.25s;
+
+    cursor: pointer;
+}
+.s {
+    
+    width: 350px;
+    padding: 5px;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: none;
+    text-align: center;
+}
+
+
+   .s input[value = "Login Admin"]{
+    position: absolute;
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid  #2ecc71;
+    padding: 14px 10px;
+    width: 100px;
+    outline: none;
+    color: slategray;
+    border-radius: 24px;
+    transition: 0.25s;
+
+    cursor: pointer;
+}
+.s input[value = "Login Admin"]:hover{
+    background: #2ecc71;
+    color:white;
+}
+
+        </style>
+        
+    </h:head>
+    <h:body style="margin: 0;padding: 0;font-family: Poppins;background: #6ea9c4;">
+        
+           
+           
+               
+                    <b:container style="width: 25%">
+                       
+                            
+                        
+                        <h:form class="box">
+                            <h2 style=" font-family: Poppins;font-style: normal;
+                                font-weight: normal;font-size: 37px;text-decoration: none;
+                                color: mediumpurple;text-transform: uppercase;">Login Admin</h2>
+                                <b:inputText id="uName" required="true" placeholder="Username" value="#{dAOAdmin.UNAME}"
+                                         required-message="Username Tidak Boleh Kosong">
+                                <f:facet name="prepend">
+                                    <span class="glyphicon glyphicon-user"></span>
+                                </f:facet>
+                            </b:inputText>
+                            <b:inputText id="pWord" required="true" placeholder="Password" value="#{dAOAdmin.PASS}"
+                                         required-message="Password Tidak Boleh Kosong" type="password">
+                                <f:facet name="prepend">
+                                    <span class="glyphicon glyphicon-lock"></span>                                    
+                                </f:facet>
+                            </b:inputText>
+                                                        <center>
+                                                            <b:commandButton look="primary btn-success" action="#{dAOAdmin.login1()}"
+                                                 value="Sign In" icon="log-in" size="1g"/>
+                                <br/><br/>
+                                
+                            </center>
+                        </h:form>
+                        
+                    </b:container>
+                
+            
+       
+    </h:body>
+</html>
+

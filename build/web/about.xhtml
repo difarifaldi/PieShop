@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>About Us</title>
+         <h:outputStylesheet library="css" name="style.css"/>
+        <style>
+            .box2 {
+   width: 100%;
+    background: gainsboro;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    height:5px;
+}
+ h2 {
+            margin: 50px;
+            text-align: center;
+            padding: 0;
+            left: auto;
+            right: auto;
+            font-weight: 400;
+            color: brown;
+        }
+.s {
+    position: fixed;
+                top: 10%;
+                width: 800px;
+                height: 800px;
+                left: 30%;
+}
+.box{
+    top: 30%;
+    left: 5px;
+    position: absolute;
+}
+            </style>
+    </h:head>
+    <h:body>
+       
+        <h:form class="s"> 
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10">
+                    <div class="section-heading">
+                        <h2 style=" margin: 50px;
+            text-align: center;
+            padding: 0;
+            left: auto;
+            right: auto;
+            font-weight: 400;
+            color: brown;">About Us</h2>
+                    </div>
+                </div>
+            </div>
+        
+                
+                <div class="col-12 col-lg-10">
+                    <div class="about-content">
+                        
+                         <table align="center">
+                             <td><h:graphicImage value = "/image/logo1.png"  height="200px" width="200px" style="left: 360px;top: 50%; position: relative;"    /></td>
+                            </table>
+                        
+                        <p>Di masa pandemi seperti saat ini tidak memungkinkan mengantri ketika memesan makanan, apalagi harus menjaga jarak 5 meter,
+                            sehingga dapat membuat antrian yang panjang.
+                            .</p>
+                        
+                           
+                   
+                                        
+                        </div>
+                        <br/>
+                        <p>Oleh karena itu terciptalah sebuah aplikasi bernama Pie'O'neer. </p>
+                        <p>dengan menggunakan aplikasi ini kita tidak perlu mengantri ketika memesan makanan.</p>
+                        <p>kita hanya perlu memesan makanan dengan aplikasi dan nantinya pelayan akan mengantarkan
+                        makanan ke tempat kita.</p>
+                        </div>
+                </div>
+         
+        
+        
+        </h:form>
+        <table class="box2">
+                
+            <td>
+                        <ui:include src="headbar.xhtml" />  
+                    </td>
+               
+            </table>
+         <table class="box">
+            <td>
+                <ui:include src="sidebar2.xhtml" />  
+            </td>
+                 
+        </table>
+        
+    </h:body>
+</html>
+

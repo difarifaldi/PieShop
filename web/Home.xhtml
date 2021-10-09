@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Home Page</title>
+        <style>
+            .section1 {
+            height: 990px;
+            background: white;
+            display: inline-block;
+            width: 100%;
+            color: brown;
+            font-weight: 800;
+            }
+            h1 {
+            margin: 100px;
+            text-align: center;
+            padding: 0;
+            font-weight: 600;
+        }
+
+        h2 {
+            margin: 50px;
+            text-align: center;
+            padding: 0;
+            left: auto;
+            right: auto;
+            font-weight: 400;
+            color: brown;
+        }
+         
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Poppins;
+
+        }
+        .box {
+    width: 350px;
+    padding: 40px;
+    height: 350px;
+    position: absolute;
+    top: 50%;
+    left: 85%;
+    transform: translate(-50%,-50%);
+    background: wheat;
+    text-align: center;
+     border-radius: 300px;
+     
+}
+ 
+                  .box2 {
+   width: 100%;
+    background: gainsboro;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    height:5px;
+}
+
+ 
+ 
+
+            
+
+        </style>
+    </h:head>
+    <h:body>
+           <div class="section1">
+               <h1>Hi, #{tblPelanggan.username}. Welcome to PieO'neer</h1>
+                <h2>Toko Pie terenak di Indonesia</h2>
+                <table align="center">
+                    <td><h:graphicImage value = "/image/logo13.jpg"  height="400px" width="400px"  /></td>
+                </table>
+                <table class="box">
+            <td>
+                <ui:include src="sidebar.xhtml" />  
+            </td>
+                 
+        </table>
+           </div>
+       
+            <table class="box2">
+                
+            <td>
+                        <ui:include src="headbar.xhtml" />  
+                    </td>
+               
+            </table>
+        
+        
+        
+        
+           
+          
+           
+            
+      
+    </h:body>
+</html>
+

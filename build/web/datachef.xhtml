@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <style>
+        
+         .section1 {
+            height: 990px;
+            background: white;
+            display: inline-block;
+            width: 100%;
+            color: brown;
+            font-weight: 800;
+            }
+            h1 {
+            margin: 100px;
+            text-align: center;
+            padding: 0;
+            font-weight: 600;
+        }
+        .box2 {
+        width: 100%;
+        background: gainsboro;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        height:5px;
+        }
+        .box1 input[value = "Data Chef"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid  #2aabd2;
+    padding: 14px 10px;
+    width: 100px;
+    outline: none;
+    color: slategray;
+    border-radius: 24px;
+    transition: 0.25s;
+
+    cursor: pointer;
+}
+.box1 input[value = "Data Chef"]:hover{
+     background: #2aabd2;
+    color: white;
+}
+        
+       
+    </style>
+    <h:body>
+         <div class="section1" align="center">
+                <h1> We Introduce The Best Chef From Our Pie Shop  </h1>
+                
+               
+                <table align="center">
+                <td><h:graphicImage value = "/image/chef3.jpg"  height="600px" width="1000px"  /></td>     
+                </table>
+                    
+                    
+                    <center>
+                        <h:form class="box1">
+            <h:commandButton value="Data Chef" action="indexchef"/>
+                        </h:form>
+       </center>
+            
+                    
+                    
+                  
+         </div>
+       
+            <table class="box2">
+                
+            <td>
+                        <ui:include src="headbar.xhtml" />  
+                    </td>
+               
+            </table>
+            
+    </h:body>
+</html>
+

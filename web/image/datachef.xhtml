@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <style>
+        
+         .section1 {
+            height: 990px;
+            background: white;
+            display: inline-block;
+            width: 100%;
+            color: brown;
+            font-weight: 800;
+            }
+            h1 {
+            margin: 100px;
+            text-align: center;
+            padding: 0;
+            font-weight: 600;
+        }
+        .box2 {
+        width: 100%;
+        background: gainsboro;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        height:5px;
+        }
+         .share-button {
+  width: 100px;
+  height: 50px;
+  background: #f1f1f1;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 80px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: .3s linear;
+}
+.share-button:hover{
+  transform: scale(1.1);
+}
+.share-button span{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #ff9933;
+  color: #2d3436;
+  text-align: center;
+  line-height: 80px;
+  z-index: 999;
+  transition: .6s linear;
+  border-radius: 40px;
+  font-size: 28px;
+ 
+}
+.share-button:hover span{
+  transform: translateX(-100%);
+  transition-delay: .3s;
+}
+.share-button a {
+  flex: 1;
+  font-size: 26px;
+  margin-right: 20px;
+  color: #ff9933;
+  text-align: center;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: .3s linear;
+}
+.share-button:hover a {
+  opacity: 1;
+  transform: translateX(0);
+}
+.share-button a:nth-of-type(1){
+  transition-delay: 1s;
+}
+.share-button a:nth-of-type(2){
+  transition-delay: .8s;
+}
+.share-button a:nth-of-type(3){
+  transition-delay: .6s;
+}
+.share-button a:nth-of-type(4){
+  transition-delay: .4s;
+}
+       
+    </style>
+    <h:body>
+         <div class="section1" align="center">
+                <h1> We Introduce The Best Chef From Our Pie Shop  </h1>
+                
+               
+                <table align="center">
+                <td><h:graphicImage value = "/image/chef3.jpg"  height="600px" width="1000px"  /></td>     
+                </table>
+                    
+                    
+                    <center>
+       <div class="share-button">
+        <span>Click here</span>
+         <a href="indexchef.xhtml" > DATA CHEF </a>
+        </div></center>
+            
+                    
+                    
+                  
+         </div>
+       
+            <table class="box2">
+                
+            <td>
+                        <ui:include src="headbar.xhtml" />  
+                    </td>
+               
+            </table>
+            
+    </h:body>
+</html>
+
